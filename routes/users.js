@@ -6,7 +6,7 @@ const db = require("../db");
 
 router.get('/allusers', async(req, res) => {
   try {
-    const response = await db.promise().query("SELECT * FROM users");
+    const response = await db.promise().query("SELECT * FROM user");
     console.log(response[0]);
     res.send(response[0]);
   } catch (error){
